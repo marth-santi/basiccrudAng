@@ -1,0 +1,17 @@
+<p>{{content}}</p>
+<button (click)="EditItem()">Edit</button>
+<button (click)="DeleteItem()">Delete</button>
+<div *ngIf="isEditing">
+  <table>
+    <tr>
+      <td>
+        <form action="">
+          <input #addContent type="text" [(ngModel)]="content" [ngModelOptions]="{standalone: true}" autofocus>
+        </form>
+      </td>
+      <td>
+        <button (click)="SaveItem()">Save</button>
+      </td>      
+    </tr>
+  </table>
+</div>
